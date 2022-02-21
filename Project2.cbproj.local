@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.993,C:\Users\Dora\Documents\Embarcadero\Studio\Projects\Project2.cbproj=C:\Users\Dora\Documents\Embarcadero\Studio\Projects\LAB2\Project2.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.945,=C:\Users\Dora\Documents\Embarcadero\Studio\Projects\Unit4.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.709,=C:\Users\Dora\Documents\Embarcadero\Studio\Projects\Unit4.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.528,C:\Users\Dora\Documents\Embarcadero\Studio\Projects\Unit4.cpp=C:\Users\Dora\Documents\Embarcadero\Studio\Projects\LAB2\Unit4.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.528,C:\Users\Dora\Documents\Embarcadero\Studio\Projects\Unit4.h=C:\Users\Dora\Documents\Embarcadero\Studio\Projects\LAB2\Unit4.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.859,C:\Users\Dora\Documents\Embarcadero\Studio\Projects\Unit3.cpp=C:\Users\Dora\Documents\Embarcadero\Studio\Projects\LAB2\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.859,C:\Users\Dora\Documents\Embarcadero\Studio\Projects\Unit3.h=C:\Users\Dora\Documents\Embarcadero\Studio\Projects\LAB2\Unit3.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.364,=C:\Users\Dora\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.461,C:\Users\Dora\Documents\Embarcadero\Studio\Projects\Project2PCH1.h=C:\Users\Dora\Documents\Embarcadero\Studio\Projects\LAB2\Project2PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.859,C:\Users\Dora\Documents\Embarcadero\Studio\Projects\Unit3.dfm=C:\Users\Dora\Documents\Embarcadero\Studio\Projects\LAB2\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.771,=C:\Users\Dora\Documents\Embarcadero\Studio\Projects\Unit3.cpp</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Project2.cpp"/>
+    <File Path="Project2PCH1.h"/>
+    <File Path="Unit3.cpp"/>
+    <File Path="Unit3.cpp"/>
+    <File Path="Unit3.dfm"/>
+    <File Path="Unit3.h"/>
+    <File Path="Unit4.cpp"/>
+    <File Path="Unit4.cpp"/>
+    <File Path="Unit4.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

@@ -50,34 +50,35 @@ void inpzap(int n, Student a[], TStringGrid *StrG)
 }
 void outpz(int n, int k, Student a[], int num[], TStringGrid *StrG)
 { /*процедура вывода записей студентов */
- RazmernStrG(k, StrG, "Студ.>средн.");  int j;
+ //RazmernStrG(k, StrG, "Студ.>средн.");
+  int j;
  for(int i=0; i<k; i++) {
 	j=num[i];
     StrG->Cells[1][i] = a[j].fio;
 	StrG->Cells[2][i] = IntToStr(a[j].godr);
-	StrG->Cells[3][i] = IntToStr(a[j].godp);
-	StrG->Cells[4][i] = IntToStr(a[j].course);
-	StrG->Cells[5][i] = a[j].group;
-	StrG->Cells[6][i] = IntToStr(a[j].ocenk.inf);
-	StrG->Cells[7][i] = IntToStr(a[j].ocenk.mat);
-	StrG->Cells[8][i] = IntToStr(a[j].ocenk.os);
-   StrG->Cells[9][i] = IntToStr(a[j].ocenk.alg);
-	StrG->Cells[10][i] = IntToStr(a[j].ocenk.eng);
+	//StrG->Cells[3][i] = IntToStr(a[j].godp);
+   //	StrG->Cells[4][i] = IntToStr(a[j].course);
+   //	StrG->Cells[5][i] = a[j].group;
+	//StrG->Cells[6][i] = IntToStr(a[j].ocenk.inf);
+	//StrG->Cells[7][i] = IntToStr(a[j].ocenk.mat);
+	//StrG->Cells[8][i] = IntToStr(a[j].ocenk.os);
+  // StrG->Cells[9][i] = IntToStr(a[j].ocenk.alg);
+   //	StrG->Cells[10][i] = IntToStr(a[j].ocenk.eng);
   }
 }
 
 int kolstud(int n, Student gruppa[], int num[])
-{/* Определение студентов-отличников в группе  */
-int five=0;
+{/* Определение студентов, которые не получали 3  */
+bool b=1;
 int j=0;
  for(int i=0; i<n; i++) {
- five=0;
-	if (gruppa[i].ocenk.alg==5)  five+=1;
-	if (gruppa[i].ocenk.os==5)  five+=1;
-	if (gruppa[i].ocenk.inf==5)  five+=1;
-	if (gruppa[i].ocenk.eng==5)  five+=1;
-	if (gruppa[i].ocenk.mat==5)  five+=1;
-	if(five==5) {
+ b=1;
+	if (gruppa[i].ocenk.alg==3)  b=0;
+	if (gruppa[i].ocenk.os==3)  b=0;
+	if (gruppa[i].ocenk.inf==3)  b=0;
+	if (gruppa[i].ocenk.eng==3)  b=0;
+	if (gruppa[i].ocenk.mat==3)  b=0;
+	if(b==1) {
 			num[j]=i;
 			j=j+1;
 		}

@@ -35,8 +35,8 @@ void RazmernStrG(int n, TStringGrid *StrG, AnsiString st)
 void inpzap(int n, Student a[], TStringGrid *StrG)
 { /*процедура ввода исходных записей из таблицы StrG */
  for(int i=0; i<n; i++) {
-     a[i].fio = StrG->Cells[1][i+1];
-     a[i].godr = StrToInt(StrG->Cells[2][i+1]);
+	 a[i].fio = StrG->Cells[1][i+1];
+	 a[i].godr = StrToInt(StrG->Cells[2][i+1]);
 	 a[i].godp = StrToInt(StrG->Cells[3][i+1]);
 	 a[i].course = StrToInt(StrG->Cells[4][i+1]);
 	 a[i].group = StrToInt(StrG->Cells[5][i+1]);
@@ -48,8 +48,8 @@ void inpzap(int n, Student a[], TStringGrid *StrG)
  }
 
 }
-void outpz(int n, int k, double ss, Student a[], int num[], TStringGrid *StrG)
-{ /*процедура вывода записей студентов,чей балл выше среднего в группе */
+void outpz(int n, int k, Student a[], int num[], TStringGrid *StrG)
+{ /*процедура вывода записей студентов */
  RazmernStrG(k, StrG, "Студ.>средн.");  int j;
  for(int i=0; i<k; i++) {
 	j=num[i];
@@ -65,28 +65,31 @@ void outpz(int n, int k, double ss, Student a[], int num[], TStringGrid *StrG)
 	StrG->Cells[10][i] = IntToStr(a[j].ocenk.eng);
   }
 }
-double midlocenk(int n, Student Gruppa[])
-{ /* Функция  для пределение среднего балла студентов в группе */
-int count=0, sum=0;
 
+int kolstud(int n, Student gruppa[], int num[])
+{/* Определение студентов в группе с одной 4 и остальными 5 */
+int four=0;
+int five=0;
+int j=0;
  for(int i=0; i<n; i++) {
-	sum = sum +gruppa[i].ocenk.alg +
-		  gruppa[i].ocenk.os+ gruppa[i].ocenk.inf +
-		  gruppa[i].ocenk.eng+ gruppa[i].ocenk.mat;
-     count = count+5;
- }
- return  double(sum)/count;
-
-}
-int kolstud(int n, Student gruppa[], double ss, int num[])
-{/* Определение количества студентов в группе чей балл выше среднего     с сохранением порядковых номеров этих студентов в массиве num */
-double r;  int j=0;
- for(int i=0; i<n; i++) {
-	 r = double(gruppa[i].ocenk.eng+
-	   gruppa[i].ocenk.alg+ gruppa[i].ocenk.inf +
-		gruppa[i].ocenk.mat+ gruppa[i].ocenk.os)/5;     if(r>ss) {        num[j]=i;
-       j=j+1;
-    }  }  return j;
+ four=0;
+ five=0;
+	if (gruppa[i].ocenk.inf==4)  four+=1;
+	if (gruppa[i].ocenk.mat==4)  four+=1;
+	if (gruppa[i].ocenk.os==4)  four+=1;
+	if (gruppa[i].ocenk.alg==4)  four+=1;
+	if (gruppa[i].ocenk.eng==4)  four+=1;
+	if (gruppa[i].ocenk.alg==5)  five+=1;
+	if (gruppa[i].ocenk.os==5)  five+=1;
+	if (gruppa[i].ocenk.inf==5)  five+=1;
+	if (gruppa[i].ocenk.eng==5)  five+=1;
+	if (gruppa[i].ocenk.mat==5)  five+=1;
+	if(four==1 and five==4) {
+			num[j]=i;
+			j=j+1;
+		}
+	}
+	return j;
 
 }
 

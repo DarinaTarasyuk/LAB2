@@ -69,15 +69,15 @@ void outpz(int n, int k, Student a[], int num[], TStringGrid *StrG)
 
 int kolstud(int n, Student gruppa[], int num[])
 {/* ќпределение студентов, которые получали только 4 и 5  */
-int b=0;
+bool b=0;
 int j=0;
  for(int i=0; i<n; i++) {
  b=0;
-	if (gruppa[i].ocenk.alg==3)  b+=1;
-	if (gruppa[i].ocenk.os==3)  b+=1;
-	if (gruppa[i].ocenk.inf==3)  b+=1;
-	if (gruppa[i].ocenk.eng==3)  b+=1;
-	if (gruppa[i].ocenk.mat==3)  b+=1;
+	if (gruppa[i].ocenk.alg==2)  b=1;
+	if (gruppa[i].ocenk.os==2)  b=1;
+	if (gruppa[i].ocenk.inf==2)  b=1;
+	if (gruppa[i].ocenk.eng==2)  b=1;
+	if (gruppa[i].ocenk.mat==2)  b=1;
 	if(b==1) {
 			num[j]=i;
 			j=j+1;
